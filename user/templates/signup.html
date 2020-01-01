@@ -1,0 +1,12 @@
+<h1>회원가입</h1>
+
+<form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    ID: <br>
+    <input name="username" type="text" value=""><br>
+    비밀번호: <br>
+    <input name="password1" type="password" value=""><br>
+    비밀번호 확인: <br>
+    <input name="password2" type="password" value=""><br>
+    <input type="submit" value="회원가입 완료!">
+</form>
