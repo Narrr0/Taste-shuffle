@@ -56,7 +56,7 @@ ROOT_URLCONF = 'TasteShuffle.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['TasteShuffle/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

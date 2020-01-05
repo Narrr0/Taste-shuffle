@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib import auth
-from django.contrib.auth.model import User
+from django.contrib.auth.models import User
 
 def signup(request):
     if request.method=='POST':
@@ -22,3 +22,10 @@ def login(request):
             return render(request,'login.html',{'error':'ID 또는 비밀번호가 일치하지 않습니다.'})
     else:
         return render(request,'login.html')
+
+def logout(request):
+    if request.method=='POST':
+        auth.logout(request)
+        return redirect('home')
+    return render(request,'login.html')
+     
